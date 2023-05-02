@@ -15,7 +15,9 @@ function QuestionItem({ question }) {
       });
       console.log("Deleted", question);
       onDeleteQuestion(question.id);
-    } 
+    }catch (error) {
+      console.log(error);
+    }
   }
   async function handleSelectChange(event) {
     const newCorrectIndex = Number(event.target.value);
